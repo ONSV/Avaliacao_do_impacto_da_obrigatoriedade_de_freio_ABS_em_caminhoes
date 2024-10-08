@@ -8,11 +8,11 @@ p {
 # Resultados  
 ***  
 
-<p>Os resultados gerados incluem: a análise comparativa antes e depois da proporção de vítimas nas categorias ileso, ferido leve, ferido grave e fatal; a análise da associação entre as variáveis "estado físico da vítima" e a obrigatoriedade do Airbag e ABS; e os mapas perceptuais para verificação da associação entre as categorias das variáveis.   
+<p>Os resultados gerados incluem: a análise comparativa antes e depois da proporção de vítimas nas categorias ileso, ferido leve, ferido grave e fatal; a análise da associação entre as variáveis "estado físico da vítima" e a obrigatoriedade do freio ABS; e os mapas perceptuais para verificação da associação entre as categorias das variáveis.   
 
 ## Proporção dos Estado Físico da Vítima  
 
-<p>Para avaliar a proporção do estado físico da vítima antes e depois da obrigatoriedade, foram elaborados dois gŕaficos de barras relativos a porcentagem para demonstrar tal aumento ou diminuição dos casos. O gráfico a seguir (@fig-grafico-Airbag) apresenta a proporção do estado físico da vítima, mostrando os percentuais antes e depois da obrigatoriedade do Airbag.  
+<p>Para avaliar a proporção do estado físico da vítima antes e depois da obrigatoriedade, foram elaborados dois gŕaficos de barras relativos a porcentagem para demonstrar tal aumento ou diminuição dos casos. O gráfico a seguir (@fig-grafico-ABS) apresenta a proporção do estado físico da vítima, mostrando os percentuais antes e depois da obrigatoriedade do ABS.  
 
 ```{r,include=FALSE,warning=FALSE,message=FALSE}
 source("scripts.R")
@@ -37,16 +37,13 @@ Prop_ef_abs_depois <-
 Prop_ef_abs <- bind_rows(Prop_ef_abs_antes,Prop_ef_abs_depois)
 ```  
 
-<p>Os gráficos evidenciam que a proporção de vítimas fatais diminuiu 2.21%, de feridos graves diminuiu 5.99% e de feridos leves diminuiu 1.9%. A proporção de vítimas ilesas aumentou 10.11%. 
-
-<p> Já o gráfico abaixo (@fig-grafico-ABS) apresenta as proporções para o caso do ABS.  
 ```{r, echo=FALSE}
 #| label: fig-grafico-ABS
 #| fig-cap: Proporção do Estado físico da vítima antes e depois da obrigatoriedade do ABS.
 Prop_ef_abs %>% 
   ggplot(aes(x = reorder(Var1, proporção), y = proporção))+
   geom_col(fill = "orange2", color = "black")+
-  geom_text(aes(y = proporção, label = scales::percent(proporção)), vjust = -0.5,
+  geom_text(aes(y = proporção, label = scales::percent(round(proporção,4))), vjust = -0.5,
             position = position_dodge(width = 1)) +
   facet_wrap(~ variavel)+
   theme_bw()+
@@ -57,12 +54,12 @@ Prop_ef_abs %>%
 
 <p> Com base no gráfico é possível verificar que:  
 
-- A proporção de vítimas fatais diminuiu 1.1%;
-- A proporção de feridos graves diminuiu 6.6%;
-- A proporção de ferido leve diminuiu 5%;
-- A proporção de ilesos aumentou 12.7%.
+- A proporção de vítimas fatais diminuiu 0.79%;
+- A proporção de feridos graves diminuiu 3.27%;
+- A proporção de ferido leve diminuiu 3.42%;
+- A proporção de ilesos aumentou 7.48%.
 
-<p>Tanto no caso do Airbag quanto do ABS a redução da propoção de vítimas feridas (leves, graves ou fatais) acompanhada do aumento da proporção de vítimas ilesas indica um impacto positivo desses dispositivos na redução da severidade dos sinistros.
+<p>A redução da propoção de vítimas feridas (leves, graves ou fatais) acompanhada do aumento da proporção de vítimas ilesas indica um impacto positivo desses dispositivos na redução da severidade dos sinistros.
 
 
 ## Associação entre o estado físico da vítima e a obrigatoriedade dos dispositivos 
@@ -70,7 +67,7 @@ Prop_ef_abs %>%
 # Tabela para o teste ----
 tab_abs <- table(dados_abs_caminhao$estado_fisico, dados_abs_caminhao$periodo)
 ```
-<p>Verificou-se associação estatisticamente significativa a um nível de confiança de 95% entre o estado físico das vítimas e a obrigatoriedade ou não do Airbag (p-valor<0,01). Da mesma forma, verificou-se associação estatisticamente significativa a um nível de confiança de 95% entre o estado físico das vítimas e a obrigatoriedade ou não do ABS (p-valor<0,01)  
+<p>Verificou-se associação estatisticamente significativa a um nível de confiança de 95% entre o estado físico das vítimas e a obrigatoriedade ou não do ABS (p-valor<0,01).
 
 ```{r, echo=FALSE}
 chisq.test(tab_abs)
@@ -93,13 +90,7 @@ abs_ca <- data.frame(res_CA_abs$var$coord, variavel = c("estado físico","estado
                                                         "estado físico","período","período"))
 ```
 
-<p>O mapa perceptual das variáveis "estado físico" e "período" para a base de dados Airbag está apresentado abaixo:
-
-<p style="font-size: 16px;">Fonte: Os autores (2024)</p>
-  
-<p>No gráfico da @fig-grafico-airbag-ANACOR há a associação clara entre as categorias "depois" e "ileso", enquanto as categorias "ferido grave" e "morto" estão mais próximas do "antes"; já a classificação "ferido leve" se encontra entre os dois períodos. 
-  
-<p>O gráfico da @fig-grafico-ABS-ANACOR, relativo ao mapa perceptual para a base de dados do ABS, será apresentado abaixo:  
+<p>O gráfico da @fig-grafico-ABS-ANACOR, relativo ao mapa perceptual para a base de dados do ABS em caminhões, será apresentado abaixo:  
 
 ```{r, echo=FALSE}
 #| label: fig-grafico-ABS-ANACOR
@@ -114,4 +105,4 @@ ggplot(data = abs_ca, aes(x = Dim.1, y = Dim.2, color = variavel))+
 ```  
 <p style="font-size: 16px;">Fonte: Os autores (2024)</p>  
 
-<p>Pelo gráfico da @fig-grafico-ABS-ANACOR pode-se observar que as classificações "ileso" e "depois" estão mais associadas, além das classificações "morto" e "antes" que estão altamente associadas (classificação "antes" sobrepôs a classificação "morto").
+<p>Pelo gráfico da @fig-grafico-ABS-ANACOR pode-se observar que as classificações "ileso" e "depois" estão mais associadas, além das classificações "ferido leve" e "antes" que estão altamente associadas. Também é possível verificar que as classificações "ferido grave" e "morto" estão mais próximas de "antes" do que "depois".  

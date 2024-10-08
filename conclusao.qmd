@@ -10,8 +10,8 @@ p {
 
 <p>Como conclusão, tem-se que a partir dos testes e análises estatísticas foram possíveis verificar que:  
 
-- Após a obrigatoriedade do ABS e do Air bag houve uma redução na proporção dos sinistros com vítimas feridas leves, grave ou mortas, enquanto houve um aumento na proporção das vítimas ilesas;
+- Após a obrigatoriedade do ABS houve uma redução na proporção dos sinistros com vítimas feridas leves, grave ou mortas, enquanto houve um aumento na proporção das vítimas ilesas;
 - Foi comprovado estatísticamente a partir do teste Qui-Quadrado que as variáveis "estado físico" e "período antes e depois da obrigatoriedade" possuem uma associação significativa entre si;
-- Há uma maior associação entre as categorias "ilesos" e "depois", enquanto a classificação "depois" permanece mais próximo de "ferido grave" e "morto".  
+- Há uma maior associação entre as categorias "ilesos" e "depois", enquanto a classificação "antes" permanece mais próximo de "ferido grave" e "morto".  
 
-<p>Vale ressaltar que estas associações foram feitos considerando o período "antes" e "depois" da obrigatoriedade do ABS e Airbag, mas que não são os únicos fatores que contribuiram para este resultado. Há diversas outras medidas que influenciaram nessa diminuição da severidade dos sinistros e na associação entre as variáveis, como por exemplo uma melhora na infraestrutura viária ou no comportamento dos condutores. Além disso, não foi possível identificar e separar o efeito individual do Airbag e do ABS em cada um dos sinistros considerados.
+<p>Vale ressaltar que estas associações foram feitos considerando o período "antes" e "depois" da obrigatoriedade do ABS, mas que não são os únicos fatores que contribuiram para este resultado. Há diversas outras medidas que influenciaram nessa diminuição da severidade dos sinistros e na associação entre as variáveis, como por exemplo uma melhora na infraestrutura viária ou no comportamento dos condutores. Além disso, não foi possível identificar e separar o efeito individual do ABS em cada um dos sinistros considerados.
