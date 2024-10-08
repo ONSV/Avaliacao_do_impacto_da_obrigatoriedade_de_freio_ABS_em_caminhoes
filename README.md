@@ -1,1 +1,1 @@
-# Avaliacao do impacto da obrigatoriedade de Air bag e freio ABS na severidade dos sinistros 
+# Avaliacao do impacto da obrigatoriedade de freio ABS em caminhões na severidade dos sinistros 
