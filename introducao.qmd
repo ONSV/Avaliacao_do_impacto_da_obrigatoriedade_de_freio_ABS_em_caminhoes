@@ -9,7 +9,7 @@ p {
 ***  
 
 
-<p>O CONTRAN, por meio da Resolução 380/11 estabeleceu a obrigatoridade dos freios ABS na frota de veículos novos. O objetivo deste documento é avaliar o impacto da obrigatoriedade do freio ABS (em caminhões) na severidade dos sinistros de trânsito. A pesquisa utilizou dados de sinistros nas rodovias federais brasileiras disponibilizados pela da Polícia Rodoviária Federal. 
+<p>O CONTRAN, por meio da Resolução 380/11 estabeleceu a obrigatoridade dos freios ABS na frota de veículos novos. O objetivo deste documento é avaliar o impacto da obrigatoriedade do freio ABS em caminhões na severidade dos sinistros de trânsito. A pesquisa utilizou dados de sinistros nas rodovias federais brasileiras disponibilizados pela da Polícia Rodoviária Federal. 
 
 ## Estudos sobre o impacto de ABS  
 
