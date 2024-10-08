@@ -1,0 +1,43 @@
+<style>
+p {
+  text-align: justify;  
+  text-indent: 20px;   
+}
+</style>  
+
+# Metodologia  
+***  
+
+<p>A concepção da metodologia de análise dos dados baseou-se na intenção de melhor isolar o impacto dos dispositivos analisados na severidade dos sinistros a partir de uma etapa de seleção e tratamento dos dados que envolveu a seleção do período de análise, dos veículos considerados na análise (segundo tipo e ano de fabricação), dos sinistros-alvo das duas medidas, dos ocupantes dos veículos a serem considerados e do estado físico das vítimas. 
+
+## Seleção do período de análise  
+
+<p>Visando retirar da análise o período de transição da obrigatoriedade do Airbag e do ABS e obter períodos antes e depois da obrigatoriedade bem definidos, foram utilizados os dados de sinistros dos anos de 2007 e 2008 como período "antes" da obrigatoriedade e dados de 2014 a 2023 como período "depois" da obrigatoriedade.  
+
+## Seleção dos tipos de veículos  
+
+<p>A base de dados fornecida pela PRF é relativa às vítimas dos sinistros de trânsito ocorridos em rodovias federais, em que cada observação representa uma vítima do sinistro. Para a avaliação em questão, foram considerados apenas os sinistros relativos a automóveis e utilitários, possibilitando uma base de comparação mais uniforme, tendo em vista que o porte do veículo pode impactar na severidade do sinistro.  
+
+## Seleção do ano de fabricação  
+
+<p>Para o período "antes" (anos de 2007 e 2008), foram consideradas apenas as vítimas ocupantes de veículos com ano de fabricação entre 1946 e 2008. Foram removidos da análise as observações com anos de fabricação inconsistentes em razão de erros de digitação identificados na base de dados.   
+<p>Para o período "depois" (anos de 2014 a 2023) foram consideradas apenas as vítimas ocupantes de veículos com ano de fabricação a partir de 2014, de forma a assegurar a presença do Airbag e do ABS.  
+
+## Seleção dos tipos de sinistros  
+
+<p> Tendo em vista a maior efetividade do Airbag para impactos frontais, foram consideradas apenas as vítimas de sinistros dos tipos colisão com objeto, colisaõ frontal, colisão traseira ou engavetamentos - todos caracterizados pelo impacto frontal. 
+<p> Para a análise do impacto do ABS foram considerados todos os tipos de sinistros, pois o melhor desempenho na frenagem pode contribuir para uma menor velocidade de impacto em qualquer tipo de sinistro.   
+
+## Seleção dos ocupantes  
+
+<p> Em razão da obrigatoriedade do Airbag aplicar-se aos assentos dianteiros do veículo (condutor e carona) e de não haver distinção na base de dados da PRF entre passageiros dos bancos dianteiro e traseiro (não impactados pelo airbag), foram consideradas apenas as vítimas na posição de condutor. 
+<p>  Para a análise do impacto do ABS foram considerados todos os ocupantes (condutores e passageiros), pois a redução da velocidade de impacto afeta o estado físico de todos os ocupantes do veículo.  
+
+## Seleção do estado físico das vítimas  
+
+<p>Foram consideradas as vítimas com estado físico ileso, ferido leve, ferido grave e fatal. No entanto, a fim de evitar o interferência de mudanças nos procedimentos de registro de sinistros sem vítima ocorridas em 2014 (quando possibilitou-se o registro dos sinistros pelo próprio envolvido no sinistro pelo e-DAT), foram consideradas apenas as vítimas ilesas em sinsitros com vítima.   
+
+## Análises estatísticas  
+
+<p>As análises estatísticas utilizadas neste estudo incluíram o teste Qui-Quadrado e a Análise de Correspondência (ANACOR). O teste Qui-Quadro é um teste de hipóteses que tem por finalidade avaliar a associação entre variáveis categóricas, enquanto a ANACOR foi aplicada para a visualização da associação entre as categorias das variáveis analisadas. Para realizar os testes foram utilizadas as funções `chisq.test()` e `MCA()` do software R. 
+

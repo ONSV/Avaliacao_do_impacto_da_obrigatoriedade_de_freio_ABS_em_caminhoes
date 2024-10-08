@@ -1,0 +1,22 @@
+<style>
+p {
+  text-align: justify;  
+}
+</style> 
+
+# Bibliografia {-}
+
+<p>AHMAD. Y. *et al*. Comparing Occupant Injury in Vehicles Equipped with and without Frontal Airbag. **Journal of the Society os Automotive Engineers Malaysia**. Malaysia. 2017.
+
+<p>BHALLA, K.;GLEASON, K. Effects of vehicle safety design on road traffic deaths, injuries, and public health burden in the Latin American region: a modelling study. **The lancet**. Vol 8. 2020.  
+
+<p>Høye, A. Are airbags a dangerous safety measure? A meta-analysis of the effects of frontal airbags on driver fatalities. **Elsevier**. Oslo, Norway. 2010.  
+<p>INTAS, G. STERGIANNIS, P. How safe are the airbags? A review of literature. **Health Science Journal**. Volume 5. 2011.  
+
+<p>Khorasani-Zavareh et al.: Antilock braking system effectiveness in prevention of road traffic crashes in Iran. BMC Public Health 2013 13:439  
+
+<p>VIANO, D.C. (2024) History of airbag safety benefits and risks, Traffic Injury Prevention, 25:3, 268-287, DOI: 10.1080/15389588.2024.2315889  
+
+<p>ZULHILMI, M. *et al*. Experimental Study on the Effect of Emergency Braking without Anti-Lock Braking System to Vehicle Dynamics Behaviour. **International Journal of Automotive and Mechanical Engineering**. Vol 17. Malaysia. 2020.  
+
+

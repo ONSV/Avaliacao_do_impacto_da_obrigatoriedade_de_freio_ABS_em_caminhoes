@@ -1,0 +1,56 @@
+<style>
+p {
+  text-align: justify;  
+  text-indent: 20px;   
+}
+</style>  
+
+# Resumo {-}  
+
+***  
+
+<p>Desde 2014 o Airbag e o ABS são itens obrigatórios nos veículos novos. No entanto, ainda que a medida esteja alinhada às recomendações internacionais de aumentar a segurança veicular, o efeito dessa medida ainda não foi avaliado no cenário brasileiro. O presente estudo tem por objetivo avaliar o impacto da obrigatoriedade do Airbag e do freios ABS (Anti-lock Braking System) na severidade dos sinistros ocorridos em rodovias federais brasileiras. A pesquisa utilizou dados de sinistros nas rodovias federais brasileiras disponibilizados pela Polícia Rodoviária Federal. A partir dessa base de dados da PRF foram identificados os sinistros-alvo de cada contramedida e realizada a seleção das características das vítimas consideradas a fim de melhor isolar o possível impacto dos dispositivos estudados. Como resultado, identificou-se que a proporção dos sinistros com vítimas classificadas com estado físico "ileso" aumentou, enquanto "ferido leve", "ferido grave" e "morto" diminuiram. Além disso, foi conduzido o teste do Qui-Quadrado para verificar a associação entre as variáveis "estado físico" e "período da obrigatoriedade (antes ou depois)", o que resultou em uma associação estatisticamente significativa a um nível de confiança de 95%. Posteriormente, aplicou-se a técnica de Análise de Correspondência para a criação de mapas perceptuais para representar visualmente a associação entre as categorias das variáveis, de modo que as categorias "ileso" e "depois" apresentaram a maior associação. Como conclusão, tem-se que a obrigatoriedade do Airbag e dos freios ABS contribuiu para reduzir a severidade dos sinsitros ocorridos nas rodovias federais brasileiras.   
+
+# Highlights {-}  
+
+***  
+
+- Após a obrigatoriedade do Airbag e dos freios ABS, houve uma redução na proporção dos sinistros com vítimas feridas leves, grave ou mortas, enquanto houve um aumento na proporção das vítimas ilesas;
+- A associação entre as variáveis "estado físico" e "período antes e depois da obrigatoriedade" resultou estatisticamente siginificativa a um nível de confiança de 95%;
+- Há uma maior associação entre as categorias estado físico da vítima "ilesos" e "depois" do período de obrigatoriedade do Airbag e dos freios ABS;  
+- A classificação "depois" da obrigatoriedade resultou mais próxima dos estados físicos "ferido grave" e "morto". 
+
+# Sobre o Observatório {-}   
+
+***  
+
+<p>O Observatório Nacional de Segurança Viária é uma instituição social sem fins lucrativos, dedicada a desenvolver ações que contribuam efetivamente para a redução dos elevados índices de ocorrências no trânsito brasileiro. Com esse objetivo, um grupo de profissionais multidisciplinares decidiu reunir todo o seu conhecimento, experiência e motivação em um único projeto grandioso e desafiador: mobilizar a sociedade em prol de um trânsito mais seguro.  
+
+
+# Como citar {-}  
+
+***   
+<p>ONSV; UFPR; AEA (2024). Avaliação do impacto da obrigatoriedade de Airbag e freio ABS na severidade dos sinistros. Observatório Nacional de Segurança Viária e Universidade Federal do Paraná. Disponível em: https://onsv.github.io/Avaliacao-do-impacto-da-obrigatoriedade-de-Airbag-e-freio-ABS-na-severidade-dos-sinistros-/
+
+<br>  
+
+:::{layout-ncol="3"}
+
+:::{.left}
+
+![](img/onsv_logo_main.png){width="80%" fig-align="center"}
+
+:::
+
+:::{.center}
+
+![](img/Aea.png){width="60%" fig-align="center"}
+
+:::
+:::{.right}
+
+![](img/marca_UFPR.png){width="60%" fig-align="center"}
+
+:::
+
+:::

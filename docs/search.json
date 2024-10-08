@@ -1,0 +1,482 @@
+[
+  {
+    "objectID": "01_relatorio.html",
+    "href": "01_relatorio.html",
+    "title": "1  Relatório",
+    "section": "",
+    "text": "2 Metodologia\nNesta seção será apresentado as especificações que foram pré-estabelecidas na base de dados, de forma que se tenha um menor erro possível relativo as generalizações. Além de apresentar os conceitos estatísticos que serão utilizados no decorrer do trabalho.\nA partir da base de dados da PRF, foi gerado duas bases de dados idênticas (cópias da base original), sendo a base de dados para avaliar o impacto do Airbag e a segunda para avaliar o impacto do ABS. Essa partição fez-se necessária para que sejam realizados filtros diferentes e únicos em cada uma.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Avaliação do impacto da obrigatoriedade de Airbag e freio ABS na severidade dos sinistros",
+    "section": "",
+    "text": "Resumo\n\n\nDesde 2014 o Airbag e o ABS são itens obrigatórios nos veículos novos. No entanto, ainda que a medida esteja alinhada às recomendações internacionais de aumentar a segurança veicular, o efeito dessa medida ainda não foi avaliado no cenário brasileiro. O presente estudo tem por objetivo avaliar o impacto da obrigatoriedade do Airbag e do freios ABS (Anti-lock Braking System) na severidade dos sinistros ocorridos em rodovias federais brasileiras. A pesquisa utilizou dados de sinistros nas rodovias federais brasileiras disponibilizados pela Polícia Rodoviária Federal. A partir dessa base de dados da PRF foram identificados os sinistros-alvo de cada contramedida e realizada a seleção das características das vítimas consideradas a fim de melhor isolar o possível impacto dos dispositivos estudados. Como resultado, identificou-se que a proporção dos sinistros com vítimas classificadas com estado físico “ileso” aumentou, enquanto “ferido leve”, “ferido grave” e “morto” diminuiram. Além disso, foi conduzido o teste do Qui-Quadrado para verificar a associação entre as variáveis “estado físico” e “período da obrigatoriedade (antes ou depois)”, o que resultou em uma associação estatisticamente significativa a um nível de confiança de 95%. Posteriormente, aplicou-se a técnica de Análise de Correspondência para a criação de mapas perceptuais para representar visualmente a associação entre as categorias das variáveis, de modo que as categorias “ileso” e “depois” apresentaram a maior associação. Como conclusão, tem-se que a obrigatoriedade do Airbag e dos freios ABS contribuiu para reduzir a severidade dos sinsitros ocorridos nas rodovias federais brasileiras.\n\n\nHighlights\n\n\nApós a obrigatoriedade do Airbag e dos freios ABS, houve uma redução na proporção dos sinistros com vítimas feridas leves, grave ou mortas, enquanto houve um aumento na proporção das vítimas ilesas;\nA associação entre as variáveis “estado físico” e “período antes e depois da obrigatoriedade” resultou estatisticamente siginificativa a um nível de confiança de 95%;\nHá uma maior associação entre as categorias estado físico da vítima “ilesos” e “depois” do período de obrigatoriedade do Airbag e dos freios ABS;\n\nA classificação “depois” da obrigatoriedade resultou mais próxima dos estados físicos “ferido grave” e “morto”.\n\n\n\nSobre o Observatório\n\n\nO Observatório Nacional de Segurança Viária é uma instituição social sem fins lucrativos, dedicada a desenvolver ações que contribuam efetivamente para a redução dos elevados índices de ocorrências no trânsito brasileiro. Com esse objetivo, um grupo de profissionais multidisciplinares decidiu reunir todo o seu conhecimento, experiência e motivação em um único projeto grandioso e desafiador: mobilizar a sociedade em prol de um trânsito mais seguro.\n\n\nComo citar\n\n\nONSV; UFPR; AEA (2024). Avaliação do impacto da obrigatoriedade de Airbag e freio ABS na severidade dos sinistros. Observatório Nacional de Segurança Viária e Universidade Federal do Paraná. Disponível em: https://onsv.github.io/Avaliacao-do-impacto-da-obrigatoriedade-de-Airbag-e-freio-ABS-na-severidade-dos-sinistros-/",
+    "crumbs": [
+      "Resumo"
+    ]
+  },
+  {
+    "objectID": "01_relatorio.html#seleção-dos-tipos-de-veículos",
+    "href": "01_relatorio.html#seleção-dos-tipos-de-veículos",
+    "title": "1  Relatório",
+    "section": "2.1 Seleção dos tipos de veículos",
+    "text": "2.1 Seleção dos tipos de veículos\n\nA base de dados fornecida pela PRF é relativa às vítimas dos sinistros de trânsito ocorridos em rodovias federais, onde cada observação representa uma vítima do sinistro. Portando há diversas categorias de veículos, como por exemplo: charrete, carro de mão, bicicleta, entre outros.\n\n\nPara que seja avaliado a implementação do uso de Air bag e ABS foram filtrados ambas as base de dados de forma a conter apenas os sinistros relativos a automóveis e utilitários, possibilitando uma base de comparação mais uniforme, tendo em vista que o porte do veículo é capaz de impactar na severidade do sinistro.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio.html#seleção-do-período-de-análise",
+    "href": "01_relatorio.html#seleção-do-período-de-análise",
+    "title": "1  Relatório",
+    "section": "2.2 Seleção do período de análise",
+    "text": "2.2 Seleção do período de análise\n\nVisando retirar da análise o período de transição da obrigatoriedade do airbag e ABS e obter períodos antes e depois da obrigatoriedade bem definidos, foram utilizados os dados de sinistros dos anos de 2007 e 2008 como período “antes” da obrigatoriedade e dados de 2014 a 2023 como período “depois” da mesma.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio.html#seleção-do-ano-de-fabricação",
+    "href": "01_relatorio.html#seleção-do-ano-de-fabricação",
+    "title": "1  Relatório",
+    "section": "2.3 Seleção do ano de fabricação",
+    "text": "2.3 Seleção do ano de fabricação\n\nComo estes dados são atribuídos pelos agentes da PRF, existe o fator de erro humano que ocasionou em valores discrepantes. Portando para as base de dados relativas aos anos 2007 e 2008, foi considerado que o ano de fabricação do veículo fosse entre 1946 e 2008.\n\n\nPara os dados dos anos de 2014 a 2023 foi considerado que o ano de fabricação fosse superior ao ano de 2014, de forma a garantir que estes possuam o Air bag e o ABS devido as resolução estabelecidas pelo CONTRAN.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio.html#seleção-dos-tipos-de-sinistros",
+    "href": "01_relatorio.html#seleção-dos-tipos-de-sinistros",
+    "title": "1  Relatório",
+    "section": "2.4 Seleção dos tipos de sinistros",
+    "text": "2.4 Seleção dos tipos de sinistros\n\nComo a resolução 311/09 previa a obrigatoriedade do Air bag sendo instalados na posição frontal do veículo, foi considerado para a base de dados do Air bag apenas sinistros que ocorreram colisão com objeto, colisaõ frontal, colisão traseira ou engavetamentos. Já para a base de dados do ABS foi considerado todos os tipos de sinistros.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio.html#seleção-dos-ocupantes",
+    "href": "01_relatorio.html#seleção-dos-ocupantes",
+    "title": "1  Relatório",
+    "section": "2.5 Seleção dos ocupantes",
+    "text": "2.5 Seleção dos ocupantes\n\nPara a base do ABS foi considerado todos os ocupantes, enquanto para a base de dados do Air bag foi considerado apenas os condutores para se avaliar o impacto.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio.html#seleção-do-estado-físico-das-vítimas",
+    "href": "01_relatorio.html#seleção-do-estado-físico-das-vítimas",
+    "title": "1  Relatório",
+    "section": "2.6 Seleção do estado físico das vítimas",
+    "text": "2.6 Seleção do estado físico das vítimas\n\nFoi necessário realizar esse filtro, pois antes de 2014 a PRF realiza o registro de todos os sinistros, independente da severidade do mesmo, mas a partir deste ano foi implantado o e-DAT (Declaração de Acidentes de Trânsito) que, em sinistros sem vítimas, quem deve realizar o registro destes sinistros são os próprios envolvidos, de modo que a partir deste ano a PRF não realizava mais o registro do boletim de ocorrência convencional (LPAT) no local do sinistro sem vítima.\n\nPortanto foi filtrado, em ambas as bases, que em todos os casos que houvessem vítimas ilesas teriam que estar classificados como sinistros com vítimas, para evitar essa incongruência entre os anos de 2007 e 2008 com os anos de 2014 à 2023.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio.html#análises-estatísticas",
+    "href": "01_relatorio.html#análises-estatísticas",
+    "title": "1  Relatório",
+    "section": "2.7 Análises estatísticas",
+    "text": "2.7 Análises estatísticas\n\nPara este trabalho foi utilizado o teste Qui-Quadrado e foi feito a Análise de Correspondência (ANACOR). O teste Qui-Quadro é um teste de hipóteses que tem por finalidade avaliar a associação entre variáveis categóricas, onde seu resultado será apresentado por um p-valor que, dependendo deste, será rejeitado ou não rejeitado (a hipótese nula é que as variáveis não possuem associação entre si), enquanto a ANACOR é uma análise que se baseia na tabela de contingência para criar um gráfico, onde seja possível visualizar tais associações entre as variáveis categóricas.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio.html#proporção-dos-estado-físico-da-vítima",
+    "href": "01_relatorio.html#proporção-dos-estado-físico-da-vítima",
+    "title": "1  Relatório",
+    "section": "3.1 Proporção dos Estado Físico da Vítima",
+    "text": "3.1 Proporção dos Estado Físico da Vítima\n\nPara avaliar a proporção do estado físico da vítima antes e depois da obrigatoriedade, foram feitos dois gŕaficos de barras relativos a porcentagem para demonstrar tal aumento ou diminuição dos casos. O gráfico abaixo (Figura 3.1) apresenta a proporção do estado físico da vítima, mostrando os percentuais antes e depois da obrigatoriedade do ABS.\n\n\n\n\n\nFigura 3.1: Proporção do Estado físico da vítima antes e depois da obrigatoriedade do ABS.\n\n\n\n\n\n\n\n\n\nFonte: Os autores (2024)\n\n\nCom base no gráfico acima foi possível verificar que:\n\nA proporção de “morto” diminuiu 1.1%;\nA proporção de “ferido grave” diminuiu 6.6%;\nA proporção de “ferido leve” diminuiu 5%;\nA proporção de “ileso” aumentou 12.7%.\n\n\nJá o gráfico abaixo (Figura 3.2) apresenta a proporção para a base relativa ao Air bag.\n\n\n\n\n\nFigura 3.2: Proporção do Estado físico da vítima antes e depois da obrigatoriedade do Air bag.\n\n\n\n\n\n\n\n\n\nFonte: Os autores (2024)\n\n\nNeste gráfico, ficou nítido que a proporção do estado físico “morto” diminuiu 2.21%, o “ferido grave” diminuiu 5.99%, e o “ferido leve” diminuiu 1.9%, enquanto apenas o estado físico “ileso” teve um aumento de 10.11%. Esse aumento na proporção dos “ilesos” na base do ABS e do Air bag significa que houve uma redução na severidade dos sinistros de trânsito.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio.html#teste-qui-quadrado",
+    "href": "01_relatorio.html#teste-qui-quadrado",
+    "title": "1  Relatório",
+    "section": "3.2 Teste Qui-Quadrado",
+    "text": "3.2 Teste Qui-Quadrado\n\nO teste Qui-Quadrado é um teste de hipóteses que tem por finalidade verificar a associação entre variáveis categóricas, as suas hipóteses serão apresentadas abaixo:\n\n\\[\nHipótese\\ nula\\ (H_0) = Não\\ há\\ associação\\ entre\\ os\\ grupos\n\\] \\[\nHipótese\\ alternativa\\ (H_1) = Os\\ grupos\\ estão\\ associados\n\\]\n\n\nA partir dessas hipóteses, deve-se definir um nível de significância para que então se aceite ou rejeite a hipótese nula a depender do p-valor gerado. Neste estudo verificaremos a associação entre a variável “estado físico da vítima” e a variável “período antes ou depois da obrigatoriedade” e utilizaremos um nível de significância de 0.05, ou seja, a probabilidade de que um resultado estatisticamente significativo ocorra por mero acaso é de 5%. Para realizar esse teste foi utilizado a função chisq.test() no R. Antes de realizar o teste Qui-Quadrado é necessário gerar a tabela de contingência entre as duas variáveis a serem analisadas. O resultado do teste para o ABS é apresentado abaixo:\n\n\n\n    Pearson's Chi-squared test\n\ndata:  tab_abs\nX-squared = 5338.7, df = 3, p-value &lt; 2.2e-16\n\n\n\n\n\nComo o p-valor resultou em menor que 2.2-16 (muito próximo de zero) iremos rejeitar a hipótese nula e afirmar que as variáveis possuem associação estatisticamente comprovada, isto é, o estado físico que a vítima se encontra após o sinistro possui uma associação com o período de tempo antes e depois da obrigatoriedade da implantação do ABS.\n\n\nPara a base de Air bag o resultado será apresentado abaixo:\n\n\n\n    Pearson's Chi-squared test\n\ndata:  tab_airbag\nX-squared = 1174.4, df = 3, p-value &lt; 2.2e-16\n\n\n\n\n\nO p-valor deste teste também resultou próximo de zero (2.2-16), demonstrando que ambas as bases possuem associação entre as variáveis “estado físico” e “período”.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio.html#análise-de-correspondência",
+    "href": "01_relatorio.html#análise-de-correspondência",
+    "title": "1  Relatório",
+    "section": "3.3 Análise de Correspondência",
+    "text": "3.3 Análise de Correspondência\n\nA análise de Correspondência irá facilitar a visualização da associação que foi provada na seção anterior. Essa análise também se baseia na tabela de contingência e permite a elaboração do mapa perceptual, em que as categorias das variáveis são plotadas segundo duas dimensões. Aquelas categorias mais próximas umas das outras representam um maior nível de associação.\n\nO mapa perceptual das variáveis “estado físico” e “período” para a base de dados ABS está apresentado abaixo:\n\n\n\n\n\nFigura 3.3: Mapa perceptual da base de dados do ABS nas variáveis “estado físico” e “período”.\n\n\n\n\n\n\n\n\n\nFonte: Os autores (2024)\n\n\nPelo gráfico da Figura 3.3 ficou nítido que as classificações “ileso” e “depois” estão mais associadas, além das classificações “morto” e “antes” que estão altamente associadas (classificação “antes” sobrepôs a classificação “morto”), enquanto as categorias “ferido grave” e “ferido leve” estão menos associadas ao período em relação as outras.\n\n\nO gráfico da Figura 3.4 relativo ao mapa perceptual para a base de dados do Air bag será apresentado abaixo:\n\n\n\n\n\nFigura 3.4: Mapa perceptual da base de dados do Air bag nas variáveis “estado físico” e “período”.\n\n\n\n\n\n\n\n\n\nFonte: Os autores (2024)\n\n\nNele há também a associação clara entre as categorias “depois” e “ileso”, enquanto as categorias “ferido grave” e “morto” estão mais próximas do “antes”; já a classificação “ferido leve” se encontra entre os dois períodos.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio 2.0.html",
+    "href": "01_relatorio 2.0.html",
+    "title": "1  Relatório",
+    "section": "",
+    "text": "2 Estudos sobre o impacto de airbags",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio 2.0.html#seleção-do-período-de-análise",
+    "href": "01_relatorio 2.0.html#seleção-do-período-de-análise",
+    "title": "1  Relatório",
+    "section": "4.1 Seleção do período de análise",
+    "text": "4.1 Seleção do período de análise\n\nVisando retirar da análise o período de transição da obrigatoriedade do airbag e do ABS e obter períodos antes e depois da obrigatoriedade bem definidos, foram utilizados os dados de sinistros dos anos de 2007 e 2008 como período “antes” da obrigatoriedade e dados de 2014 a 2023 como período “depois” da obrigatoriedade.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio 2.0.html#seleção-dos-tipos-de-veículos",
+    "href": "01_relatorio 2.0.html#seleção-dos-tipos-de-veículos",
+    "title": "1  Relatório",
+    "section": "4.2 Seleção dos tipos de veículos",
+    "text": "4.2 Seleção dos tipos de veículos\n\nA base de dados fornecida pela PRF é relativa às vítimas dos sinistros de trânsito ocorridos em rodovias federais, em que cada observação representa uma vítima do sinistro. Para a avaliação em questão, foram considerados apenas os sinistros relativos a automóveis e utilitários, possibilitando uma base de comparação mais uniforme, tendo em vista que o porte do veículo pode impactar na severidade do sinistro.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio 2.0.html#seleção-do-ano-de-fabricação",
+    "href": "01_relatorio 2.0.html#seleção-do-ano-de-fabricação",
+    "title": "1  Relatório",
+    "section": "4.3 Seleção do ano de fabricação",
+    "text": "4.3 Seleção do ano de fabricação\n\nPara o período “antes” (anos de 2007 e 2008), foram consideradas apenas as vítimas ocupantes de veículos com ano de fabricação entre 1946 e 2008. Foram removidos da análise as observações com anos de fabricação inconsistentes em razão de erros de digitação identificados na base de dados.\n\n\nPara o período “depois” (anos de 2014 a 2023) foram consideradas apenas as vítimas ocupantes de veículos com ano de fabricação a partir de 2014, de forma a assegurar a presença do airbag e do ABS.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio 2.0.html#seleção-dos-tipos-de-sinistros",
+    "href": "01_relatorio 2.0.html#seleção-dos-tipos-de-sinistros",
+    "title": "1  Relatório",
+    "section": "4.4 Seleção dos tipos de sinistros",
+    "text": "4.4 Seleção dos tipos de sinistros\n\nTendo em vista a maior efetividade do airbag para impactos frontais, foram consideradas apenas as vítimas de sinistros dos tipos colisão com objeto, colisaõ frontal, colisão traseira ou engavetamentos - todos caracterizados pelo impacto frontal.\n\nPara a análise do impacto do ABS foram considerados todos os tipos de sinistros, pois o melhor desempenho na frenagem pode contribuir para uma menor velocidade de impacto em qualquer tipo de sinistro.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio 2.0.html#seleção-dos-ocupantes",
+    "href": "01_relatorio 2.0.html#seleção-dos-ocupantes",
+    "title": "1  Relatório",
+    "section": "4.5 Seleção dos ocupantes",
+    "text": "4.5 Seleção dos ocupantes\n\nEm razão da obrigatoriedade do airbag aplicar-se aos assentos dianteiros do veículo (condutor e carona) e de não haver distinção na base de dados da PRF entre passageiros dos bancos dianteiro e traseiro (não impactados pelo airbag), foram consideradas apenas as vítimas na posição de condutor.\n\nPara a análise do impacto do ABS foram considerados todos os ocupantes (condutores e passageiros), pois a redução da velocidade de impacto afeta o estado físico de todos os ocupantes do veículo.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio 2.0.html#seleção-do-estado-físico-das-vítimas",
+    "href": "01_relatorio 2.0.html#seleção-do-estado-físico-das-vítimas",
+    "title": "1  Relatório",
+    "section": "4.6 Seleção do estado físico das vítimas",
+    "text": "4.6 Seleção do estado físico das vítimas\n\nForam consideradas as vítimas com estado físico ileso, ferido leve, ferido grave e fatal. No entanto, a fim de evitar o interferência de mudanças nos procedimentos de registro de sinistros sem vítima ocorridas em 2014 (quando possibilitou-se o registro dos sinistros pelo próprio envolvido no sinistro pelo e-DAT), foram consideradas apenas as vítimas ilesas em sinsitros com vítima.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio 2.0.html#análises-estatísticas",
+    "href": "01_relatorio 2.0.html#análises-estatísticas",
+    "title": "1  Relatório",
+    "section": "4.7 Análises estatísticas",
+    "text": "4.7 Análises estatísticas\n\nAs análises estatísticas utilizadas neste estudo incluíram o teste Qui-Quadrado e a Análise de Correspondência (ANACOR). O teste Qui-Quadro é um teste de hipóteses que tem por finalidade avaliar a associação entre variáveis categóricas, enquanto a ANACOR foi aplicada para a visualização da associação entre as categorias das variáveis analisadas. Para realizar os testes foram utilizadas as funções chisq.test() e MCA() do software R.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio 2.0.html#proporção-dos-estado-físico-da-vítima",
+    "href": "01_relatorio 2.0.html#proporção-dos-estado-físico-da-vítima",
+    "title": "1  Relatório",
+    "section": "5.1 Proporção dos Estado Físico da Vítima",
+    "text": "5.1 Proporção dos Estado Físico da Vítima\n\nPara avaliar a proporção do estado físico da vítima antes e depois da obrigatoriedade, foram elaborados dois gŕaficos de barras relativos a porcentagem para demonstrar tal aumento ou diminuição dos casos. O gráfico a seguir (Figura 5.1) apresenta a proporção do estado físico da vítima, mostrando os percentuais antes e depois da obrigatoriedade do ABS.\n\n\n\n\n\nFigura 5.1: Proporção do Estado físico da vítima antes e depois da obrigatoriedade do ABS.\n\n\n\n\n\n\n\n\n\nFonte: Os autores (2024)\n\n\nCom base no gráfico é possível verificar que:\n\nA proporção de vítimas fatais diminuiu 1.1%;\nA proporção de feridos graves diminuiu 6.6%;\nA proporção de ferido leve diminuiu 5%;\nA proporção de ilesos aumentou 12.7%.\n\n\nJá o gráfico abaixo (Figura 5.2) apresenta as proporções para o caso do airbag.\n\n\n\n\n\nFigura 5.2: Proporção do Estado físico da vítima antes e depois da obrigatoriedade do Air bag.\n\n\n\n\n\n\n\n\n\nFonte: Os autores (2024)\n\n\nOs gráficos evidenciam que a proporção de vítimas fatais diminuiu 2.21%, de feridos graves diminuiu 5.99% e de feridos leves diminuiu 1.9%. A proporção de vítimas ilesas aumentou 10.11%.\n\nTanto no caso do airbag quanto do ABS a redução da propoção de vítimas feridas (leves, graves ou fatais) acompanhada do aumento da proporção de vítimas ilesas indica um impacto positivo desses dispositivos na redução da severidade dos sinistros.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio 2.0.html#associação-entre-o-estado-físico-da-vítima-e-a-obrigatoriedade-dos-dispositivos",
+    "href": "01_relatorio 2.0.html#associação-entre-o-estado-físico-da-vítima-e-a-obrigatoriedade-dos-dispositivos",
+    "title": "1  Relatório",
+    "section": "5.2 Associação entre o estado físico da vítima e a obrigatoriedade dos dispositivos",
+    "text": "5.2 Associação entre o estado físico da vítima e a obrigatoriedade dos dispositivos\n\nVerificou-se associação estatisticamente significativa a um nível de confiança de 95% entre o estado físico das vítimas e a obrigatoriedade ou não do airbag (p-valor&lt;0,01). Da mesma forma, verificou-se associação estatisticamente significativa a um nível de confiança de 95% entre o estado físico das vítimas e a obrigatoriedade ou não do ABS (p-valor&lt;0,01)\n\n\n\n    Pearson's Chi-squared test\n\ndata:  tab_airbag\nX-squared = 1174.4, df = 3, p-value &lt; 2.2e-16\n\n\n\n\n\n    Pearson's Chi-squared test\n\ndata:  tab_abs\nX-squared = 5338.7, df = 3, p-value &lt; 2.2e-16",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "01_relatorio 2.0.html#análise-de-correspondência",
+    "href": "01_relatorio 2.0.html#análise-de-correspondência",
+    "title": "1  Relatório",
+    "section": "5.3 Análise de Correspondência",
+    "text": "5.3 Análise de Correspondência\n\nA análise de Correspondência irá facilitar a visualização da associação que foi provada na seção anterior. Essa análise também se baseia na tabela de contingência e permite a elaboração do mapa perceptual, em que as categorias das variáveis são plotadas segundo duas dimensões. Aquelas categorias mais próximas umas das outras representam um maior nível de associação.\n\nO mapa perceptual das variáveis “estado físico” e “período” para a base de dados ABS está apresentado abaixo:\n\n\n\n\n\nFigura 5.3: Mapa perceptual da base de dados do ABS nas variáveis “estado físico” e “período”.\n\n\n\n\n\n\n\n\n\nFonte: Os autores (2024)\n\n\nPelo gráfico da Figura 5.3 ficou nítido que as classificações “ileso” e “depois” estão mais associadas, além das classificações “morto” e “antes” que estão altamente associadas (classificação “antes” sobrepôs a classificação “morto”), enquanto as categorias “ferido grave” e “ferido leve” estão menos associadas ao período em relação as outras.\n\n\nO gráfico da Figura 5.4 relativo ao mapa perceptual para a base de dados do Air bag será apresentado abaixo:\n\n\n\n\n\nFigura 5.4: Mapa perceptual da base de dados do Air bag nas variáveis “estado físico” e “período”.\n\n\n\n\n\n\n\n\n\nFonte: Os autores (2024)\n\n\nNele há também a associação clara entre as categorias “depois” e “ileso”, enquanto as categorias “ferido grave” e “morto” estão mais próximas do “antes”; já a classificação “ferido leve” se encontra entre os dois períodos.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "introducao.html",
+    "href": "introducao.html",
+    "title": "1  Introdução",
+    "section": "",
+    "text": "1.1 Estudos sobre o impacto de Airbags\nUm estudo baseado meta-análise realizado por Høye (2010) avaliou em diversos países os efeitos dos Airbags frontais nas mortes de condutores com e sem cinto de segurança, as variáveis incluíam veículos de diferentes portes e variados tipos de Airbags. Os resultados indicaram uma redução de 22% nas mortes nos sinistros em geral e uma redução de 18% para as colisões frontais com o uso de Airbag associado ao cinto de segurança. No entanto, não foi observada qualquer redução global da mortalidade entre os condutores sem cinto de segurança e, em alguns casos, o risco de mortalidade aumentou, especialmente em sinistros sem colisão enfatizando assim, a importância do controle das variáveis observadas, como o uso do cinto de segurança e a direção do impacto do veículo para avaliar com maior precisão eficácia dos Airbags como item de segurança veicular.\nViano (2024) detalhou um histórico de evolução dos benefícios e riscos de segurança dos Airbags com foco na análise de dados de campo. A pesquisa realizada nos Estados Unidos demonstrou que os Airbags, especialmente quando utilizados em conjunto com cintos de segurança, são eficazes na prevenção de mortes e ferimentos em colisões. Em geral, a redução do risco de mortes e lesões foi de 69,7% com uso de cinto e Airbags. Por fim, observou-se também riscos associados ao acionamento e ruptura de Airbags, incluindo casos de lesões e mortes relacionadas a isso, levando a necessidade de avanços no design do mesmo para mitigação de tais riscos.\nAhmad et al., 2017 comparou os resultados de lesões nos ocupantes de veículos com e sem Airbags frontais usando dummies adultos em um cenário de teste de colisão frontal onde os veículos foram impelidos contra uma barreira estacionária a uma velocidade de 64 km/h para avaliar a eficácia do equipamento de segurança em estudo. Os dados de lesões nas extremidades superiores e na cabeça, foram coletados e analisados usando o Critério de Lesão na Cabeça (HIC) e o 3ms e foram calculados com base em medições de aceleração durante o pulso de colisão. Os resultados revelaram que as métricas de lesões na cabeça do condutor melhoraram 87% quando o Airbag estava presente e que o pico de aceleração 3ms que quantifica as medidas de impacto na região do tórax foi reduzida em 66%, diminuindo assim potenciais lesões. Para os passageiros dianteiros, os valores de aceleração HIC e 3ms foram reduzidos em 48% e 21%, respectivamente, ao comparar o veículo com e sem Airbag.\nNos Estados Unidos, usando dados entre 1993 e 2000, Itans e Stergiannis (2011) observaram que os Airbags podem reduzir a incidência de fatalidades em colisões frontais veiculares em aproximadamente 25% quando comparados à cenários onde apenas os cintos de segurança são usados, além de reduzir as lesões dos passageiros em até 50%. No entanto, os autores salientaram que o uso ou acionamento inadequado do mesmo pode causar lesões graves, incluindo queimaduras diversas pela liberação de gases, lesões oculares 2,5%, lesões e fraturas em extremidades superiores 2,7% e 4,4%, respectivamente.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "introducao.html#seleção-do-período-de-análise",
+    "href": "introducao.html#seleção-do-período-de-análise",
+    "title": "1  Relatório",
+    "section": "4.1 Seleção do período de análise",
+    "text": "4.1 Seleção do período de análise\n\nVisando retirar da análise o período de transição da obrigatoriedade do airbag e do ABS e obter períodos antes e depois da obrigatoriedade bem definidos, foram utilizados os dados de sinistros dos anos de 2007 e 2008 como período “antes” da obrigatoriedade e dados de 2014 a 2023 como período “depois” da obrigatoriedade.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "introducao.html#seleção-dos-tipos-de-veículos",
+    "href": "introducao.html#seleção-dos-tipos-de-veículos",
+    "title": "1  Relatório",
+    "section": "4.2 Seleção dos tipos de veículos",
+    "text": "4.2 Seleção dos tipos de veículos\n\nA base de dados fornecida pela PRF é relativa às vítimas dos sinistros de trânsito ocorridos em rodovias federais, em que cada observação representa uma vítima do sinistro. Para a avaliação em questão, foram considerados apenas os sinistros relativos a automóveis e utilitários, possibilitando uma base de comparação mais uniforme, tendo em vista que o porte do veículo pode impactar na severidade do sinistro.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "introducao.html#seleção-do-ano-de-fabricação",
+    "href": "introducao.html#seleção-do-ano-de-fabricação",
+    "title": "1  Relatório",
+    "section": "4.3 Seleção do ano de fabricação",
+    "text": "4.3 Seleção do ano de fabricação\n\nPara o período “antes” (anos de 2007 e 2008), foram consideradas apenas as vítimas ocupantes de veículos com ano de fabricação entre 1946 e 2008. Foram removidos da análise as observações com anos de fabricação inconsistentes em razão de erros de digitação identificados na base de dados.\n\n\nPara o período “depois” (anos de 2014 a 2023) foram consideradas apenas as vítimas ocupantes de veículos com ano de fabricação a partir de 2014, de forma a assegurar a presença do airbag e do ABS.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "introducao.html#seleção-dos-tipos-de-sinistros",
+    "href": "introducao.html#seleção-dos-tipos-de-sinistros",
+    "title": "1  Relatório",
+    "section": "4.4 Seleção dos tipos de sinistros",
+    "text": "4.4 Seleção dos tipos de sinistros\n\nTendo em vista a maior efetividade do airbag para impactos frontais, foram consideradas apenas as vítimas de sinistros dos tipos colisão com objeto, colisaõ frontal, colisão traseira ou engavetamentos - todos caracterizados pelo impacto frontal.\n\nPara a análise do impacto do ABS foram considerados todos os tipos de sinistros, pois o melhor desempenho na frenagem pode contribuir para uma menor velocidade de impacto em qualquer tipo de sinistro.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "introducao.html#seleção-dos-ocupantes",
+    "href": "introducao.html#seleção-dos-ocupantes",
+    "title": "1  Relatório",
+    "section": "4.5 Seleção dos ocupantes",
+    "text": "4.5 Seleção dos ocupantes\n\nEm razão da obrigatoriedade do airbag aplicar-se aos assentos dianteiros do veículo (condutor e carona) e de não haver distinção na base de dados da PRF entre passageiros dos bancos dianteiro e traseiro (não impactados pelo airbag), foram consideradas apenas as vítimas na posição de condutor.\n\nPara a análise do impacto do ABS foram considerados todos os ocupantes (condutores e passageiros), pois a redução da velocidade de impacto afeta o estado físico de todos os ocupantes do veículo.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "introducao.html#seleção-do-estado-físico-das-vítimas",
+    "href": "introducao.html#seleção-do-estado-físico-das-vítimas",
+    "title": "1  Relatório",
+    "section": "4.6 Seleção do estado físico das vítimas",
+    "text": "4.6 Seleção do estado físico das vítimas\n\nForam consideradas as vítimas com estado físico ileso, ferido leve, ferido grave e fatal. No entanto, a fim de evitar o interferência de mudanças nos procedimentos de registro de sinistros sem vítima ocorridas em 2014 (quando possibilitou-se o registro dos sinistros pelo próprio envolvido no sinistro pelo e-DAT), foram consideradas apenas as vítimas ilesas em sinsitros com vítima.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "introducao.html#análises-estatísticas",
+    "href": "introducao.html#análises-estatísticas",
+    "title": "1  Relatório",
+    "section": "4.7 Análises estatísticas",
+    "text": "4.7 Análises estatísticas\n\nAs análises estatísticas utilizadas neste estudo incluíram o teste Qui-Quadrado e a Análise de Correspondência (ANACOR). O teste Qui-Quadro é um teste de hipóteses que tem por finalidade avaliar a associação entre variáveis categóricas, enquanto a ANACOR foi aplicada para a visualização da associação entre as categorias das variáveis analisadas. Para realizar os testes foram utilizadas as funções chisq.test() e MCA() do software R.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "introducao.html#proporção-dos-estado-físico-da-vítima",
+    "href": "introducao.html#proporção-dos-estado-físico-da-vítima",
+    "title": "1  Relatório",
+    "section": "5.1 Proporção dos Estado Físico da Vítima",
+    "text": "5.1 Proporção dos Estado Físico da Vítima\n\nPara avaliar a proporção do estado físico da vítima antes e depois da obrigatoriedade, foram elaborados dois gŕaficos de barras relativos a porcentagem para demonstrar tal aumento ou diminuição dos casos. O gráfico a seguir (Figura 3.1) apresenta a proporção do estado físico da vítima, mostrando os percentuais antes e depois da obrigatoriedade do ABS.\n\n\n\n\n\nFigura 5.1: Proporção do Estado físico da vítima antes e depois da obrigatoriedade do ABS.\n\n\n\n\n\n\n\n\n\nFonte: Os autores (2024)\n\n\nCom base no gráfico é possível verificar que:\n\nA proporção de vítimas fatais diminuiu 1.1%;\nA proporção de feridos graves diminuiu 6.6%;\nA proporção de ferido leve diminuiu 5%;\nA proporção de ilesos aumentou 12.7%.\n\n\nJá o gráfico abaixo (Figura 3.2) apresenta as proporções para o caso do airbag.\n\n\n\n\n\nFigura 5.2: Proporção do Estado físico da vítima antes e depois da obrigatoriedade do Air bag.\n\n\n\n\n\n\n\n\n\nFonte: Os autores (2024)\n\n\nOs gráficos evidenciam que a proporção de vítimas fatais diminuiu 2.21%, de feridos graves diminuiu 5.99% e de feridos leves diminuiu 1.9%. A proporção de vítimas ilesas aumentou 10.11%.\n\nTanto no caso do airbag quanto do ABS a redução da propoção de vítimas feridas (leves, graves ou fatais) acompanhada do aumento da proporção de vítimas ilesas indica um impacto positivo desses dispositivos na redução da severidade dos sinistros.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "introducao.html#associação-entre-o-estado-físico-da-vítima-e-a-obrigatoriedade-dos-dispositivos",
+    "href": "introducao.html#associação-entre-o-estado-físico-da-vítima-e-a-obrigatoriedade-dos-dispositivos",
+    "title": "1  Relatório",
+    "section": "5.2 Associação entre o estado físico da vítima e a obrigatoriedade dos dispositivos",
+    "text": "5.2 Associação entre o estado físico da vítima e a obrigatoriedade dos dispositivos\n\nVerificou-se associação estatisticamente significativa a um nível de confiança de 95% entre o estado físico das vítimas e a obrigatoriedade ou não do airbag (p-valor&lt;0,01). Da mesma forma, verificou-se associação estatisticamente significativa a um nível de confiança de 95% entre o estado físico das vítimas e a obrigatoriedade ou não do ABS (p-valor&lt;0,01)\n\n\n\n    Pearson's Chi-squared test\n\ndata:  tab_airbag\nX-squared = 1174.4, df = 3, p-value &lt; 2.2e-16\n\n\n\n\n\n    Pearson's Chi-squared test\n\ndata:  tab_abs\nX-squared = 5338.7, df = 3, p-value &lt; 2.2e-16",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "introducao.html#análise-de-correspondência",
+    "href": "introducao.html#análise-de-correspondência",
+    "title": "1  Relatório",
+    "section": "5.3 Análise de Correspondência",
+    "text": "5.3 Análise de Correspondência\n\nA análise de Correspondência irá facilitar a visualização da associação que foi provada na seção anterior. Essa análise também se baseia na tabela de contingência e permite a elaboração do mapa perceptual, em que as categorias das variáveis são plotadas segundo duas dimensões. Aquelas categorias mais próximas umas das outras representam um maior nível de associação.\n\nO mapa perceptual das variáveis “estado físico” e “período” para a base de dados ABS está apresentado abaixo:\n\n\n\n\n\nFigura 5.3: Mapa perceptual da base de dados do ABS nas variáveis “estado físico” e “período”.\n\n\n\n\n\n\n\n\n\nFonte: Os autores (2024)\n\n\nPelo gráfico da Figura 3.3 ficou nítido que as classificações “ileso” e “depois” estão mais associadas, além das classificações “morto” e “antes” que estão altamente associadas (classificação “antes” sobrepôs a classificação “morto”), enquanto as categorias “ferido grave” e “ferido leve” estão menos associadas ao período em relação as outras.\n\n\nO gráfico da Figura 3.4 relativo ao mapa perceptual para a base de dados do Air bag será apresentado abaixo:\n\n\n\n\n\nFigura 5.4: Mapa perceptual da base de dados do Air bag nas variáveis “estado físico” e “período”.\n\n\n\n\n\n\n\n\n\nFonte: Os autores (2024)\n\n\nNele há também a associação clara entre as categorias “depois” e “ileso”, enquanto as categorias “ferido grave” e “morto” estão mais próximas do “antes”; já a classificação “ferido leve” se encontra entre os dois períodos.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Relatório</span>"
+    ]
+  },
+  {
+    "objectID": "resultados.html",
+    "href": "resultados.html",
+    "title": "3  Resultados",
+    "section": "",
+    "text": "3.1 Proporção dos Estado Físico da Vítima\nPara avaliar a proporção do estado físico da vítima antes e depois da obrigatoriedade, foram elaborados dois gŕaficos de barras relativos a porcentagem para demonstrar tal aumento ou diminuição dos casos. O gráfico a seguir (?fig-grafico-Airbag) apresenta a proporção do estado físico da vítima, mostrando os percentuais antes e depois da obrigatoriedade do Airbag.\nOs gráficos evidenciam que a proporção de vítimas fatais diminuiu 2.21%, de feridos graves diminuiu 5.99% e de feridos leves diminuiu 1.9%. A proporção de vítimas ilesas aumentou 10.11%.\nJá o gráfico abaixo (Figura 3.1) apresenta as proporções para o caso do ABS.\nFigura 3.1: Proporção do Estado físico da vítima antes e depois da obrigatoriedade do ABS.\nFonte: Os autores (2024)\nCom base no gráfico é possível verificar que:\nTanto no caso do Airbag quanto do ABS a redução da propoção de vítimas feridas (leves, graves ou fatais) acompanhada do aumento da proporção de vítimas ilesas indica um impacto positivo desses dispositivos na redução da severidade dos sinistros.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Resultados</span>"
+    ]
+  },
+  {
+    "objectID": "resultados.html#proporção-dos-estado-físico-da-vítima",
+    "href": "resultados.html#proporção-dos-estado-físico-da-vítima",
+    "title": "3  Resultados",
+    "section": "",
+    "text": "A proporção de vítimas fatais diminuiu 1.1%;\nA proporção de feridos graves diminuiu 6.6%;\nA proporção de ferido leve diminuiu 5%;\nA proporção de ilesos aumentou 12.7%.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Resultados</span>"
+    ]
+  },
+  {
+    "objectID": "resultados.html#associação-entre-o-estado-físico-da-vítima-e-a-obrigatoriedade-dos-dispositivos",
+    "href": "resultados.html#associação-entre-o-estado-físico-da-vítima-e-a-obrigatoriedade-dos-dispositivos",
+    "title": "3  Resultados",
+    "section": "3.2 Associação entre o estado físico da vítima e a obrigatoriedade dos dispositivos",
+    "text": "3.2 Associação entre o estado físico da vítima e a obrigatoriedade dos dispositivos\n\nVerificou-se associação estatisticamente significativa a um nível de confiança de 95% entre o estado físico das vítimas e a obrigatoriedade ou não do Airbag (p-valor&lt;0,01). Da mesma forma, verificou-se associação estatisticamente significativa a um nível de confiança de 95% entre o estado físico das vítimas e a obrigatoriedade ou não do ABS (p-valor&lt;0,01)\n\n\n\n    Pearson's Chi-squared test\n\ndata:  tab_abs\nX-squared = 523.57, df = 3, p-value &lt; 2.2e-16",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Resultados</span>"
+    ]
+  },
+  {
+    "objectID": "resultados.html#análise-de-correspondência",
+    "href": "resultados.html#análise-de-correspondência",
+    "title": "3  Resultados",
+    "section": "3.3 Análise de Correspondência",
+    "text": "3.3 Análise de Correspondência\n\nA análise de Correspondência irá facilitar a visualização da associação que foi provada na seção anterior. Essa análise também se baseia na tabela de contingência e permite a elaboração do mapa perceptual, em que as categorias das variáveis são plotadas segundo duas dimensões. Aquelas categorias mais próximas umas das outras representam um maior nível de associação.\n\nO mapa perceptual das variáveis “estado físico” e “período” para a base de dados Airbag está apresentado abaixo:\n\nFonte: Os autores (2024)\n\n\nNo gráfico da ?fig-grafico-airbag-ANACOR há a associação clara entre as categorias “depois” e “ileso”, enquanto as categorias “ferido grave” e “morto” estão mais próximas do “antes”; já a classificação “ferido leve” se encontra entre os dois períodos.\n\nO gráfico da Figura 3.2, relativo ao mapa perceptual para a base de dados do ABS, será apresentado abaixo:\n\n\n\n\n\nFigura 3.2: Mapa perceptual da base de dados do ABS nas variáveis “estado físico” e “período”.\n\n\n\n\n\n\n\n\n\nFonte: Os autores (2024)\n\n\nPelo gráfico da Figura 3.2 pode-se observar que as classificações “ileso” e “depois” estão mais associadas, além das classificações “morto” e “antes” que estão altamente associadas (classificação “antes” sobrepôs a classificação “morto”).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Resultados</span>"
+    ]
+  },
+  {
+    "objectID": "conclusao.html",
+    "href": "conclusao.html",
+    "title": "4  Conclusão",
+    "section": "",
+    "text": "Como conclusão, tem-se que a partir dos testes e análises estatísticas foram possíveis verificar que:\n\nApós a obrigatoriedade do ABS e do Air bag houve uma redução na proporção dos sinistros com vítimas feridas leves, grave ou mortas, enquanto houve um aumento na proporção das vítimas ilesas;\nFoi comprovado estatísticamente a partir do teste Qui-Quadrado que as variáveis “estado físico” e “período antes e depois da obrigatoriedade” possuem uma associação significativa entre si;\nHá uma maior associação entre as categorias “ilesos” e “depois”, enquanto a classificação “depois” permanece mais próximo de “ferido grave” e “morto”.\n\n\nVale ressaltar que estas associações foram feitos considerando o período “antes” e “depois” da obrigatoriedade do ABS e Airbag, mas que não são os únicos fatores que contribuiram para este resultado. Há diversas outras medidas que influenciaram nessa diminuição da severidade dos sinistros e na associação entre as variáveis, como por exemplo uma melhora na infraestrutura viária ou no comportamento dos condutores. Além disso, não foi possível identificar e separar o efeito individual do Airbag e do ABS em cada um dos sinistros considerados.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Conclusão</span>"
+    ]
+  },
+  {
+    "objectID": "metodologia.html",
+    "href": "metodologia.html",
+    "title": "2  Metodologia",
+    "section": "",
+    "text": "2.1 Seleção do período de análise\nVisando retirar da análise o período de transição da obrigatoriedade do Airbag e do ABS e obter períodos antes e depois da obrigatoriedade bem definidos, foram utilizados os dados de sinistros dos anos de 2007 e 2008 como período “antes” da obrigatoriedade e dados de 2014 a 2023 como período “depois” da obrigatoriedade.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metodologia</span>"
+    ]
+  },
+  {
+    "objectID": "metodologia.html#seleção-dos-tipos-de-veículos",
+    "href": "metodologia.html#seleção-dos-tipos-de-veículos",
+    "title": "2  Metodologia",
+    "section": "2.2 Seleção dos tipos de veículos",
+    "text": "2.2 Seleção dos tipos de veículos\n\nA base de dados fornecida pela PRF é relativa às vítimas dos sinistros de trânsito ocorridos em rodovias federais, em que cada observação representa uma vítima do sinistro. Para a avaliação em questão, foram considerados apenas os sinistros relativos a automóveis e utilitários, possibilitando uma base de comparação mais uniforme, tendo em vista que o porte do veículo pode impactar na severidade do sinistro.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metodologia</span>"
+    ]
+  },
+  {
+    "objectID": "metodologia.html#seleção-do-ano-de-fabricação",
+    "href": "metodologia.html#seleção-do-ano-de-fabricação",
+    "title": "2  Metodologia",
+    "section": "2.3 Seleção do ano de fabricação",
+    "text": "2.3 Seleção do ano de fabricação\n\nPara o período “antes” (anos de 2007 e 2008), foram consideradas apenas as vítimas ocupantes de veículos com ano de fabricação entre 1946 e 2008. Foram removidos da análise as observações com anos de fabricação inconsistentes em razão de erros de digitação identificados na base de dados.\n\n\nPara o período “depois” (anos de 2014 a 2023) foram consideradas apenas as vítimas ocupantes de veículos com ano de fabricação a partir de 2014, de forma a assegurar a presença do Airbag e do ABS.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metodologia</span>"
+    ]
+  },
+  {
+    "objectID": "metodologia.html#seleção-dos-tipos-de-sinistros",
+    "href": "metodologia.html#seleção-dos-tipos-de-sinistros",
+    "title": "2  Metodologia",
+    "section": "2.4 Seleção dos tipos de sinistros",
+    "text": "2.4 Seleção dos tipos de sinistros\n\nTendo em vista a maior efetividade do Airbag para impactos frontais, foram consideradas apenas as vítimas de sinistros dos tipos colisão com objeto, colisaõ frontal, colisão traseira ou engavetamentos - todos caracterizados pelo impacto frontal.\n\nPara a análise do impacto do ABS foram considerados todos os tipos de sinistros, pois o melhor desempenho na frenagem pode contribuir para uma menor velocidade de impacto em qualquer tipo de sinistro.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metodologia</span>"
+    ]
+  },
+  {
+    "objectID": "metodologia.html#seleção-dos-ocupantes",
+    "href": "metodologia.html#seleção-dos-ocupantes",
+    "title": "2  Metodologia",
+    "section": "2.5 Seleção dos ocupantes",
+    "text": "2.5 Seleção dos ocupantes\n\nEm razão da obrigatoriedade do Airbag aplicar-se aos assentos dianteiros do veículo (condutor e carona) e de não haver distinção na base de dados da PRF entre passageiros dos bancos dianteiro e traseiro (não impactados pelo airbag), foram consideradas apenas as vítimas na posição de condutor.\n\nPara a análise do impacto do ABS foram considerados todos os ocupantes (condutores e passageiros), pois a redução da velocidade de impacto afeta o estado físico de todos os ocupantes do veículo.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metodologia</span>"
+    ]
+  },
+  {
+    "objectID": "metodologia.html#seleção-do-estado-físico-das-vítimas",
+    "href": "metodologia.html#seleção-do-estado-físico-das-vítimas",
+    "title": "2  Metodologia",
+    "section": "2.6 Seleção do estado físico das vítimas",
+    "text": "2.6 Seleção do estado físico das vítimas\n\nForam consideradas as vítimas com estado físico ileso, ferido leve, ferido grave e fatal. No entanto, a fim de evitar o interferência de mudanças nos procedimentos de registro de sinistros sem vítima ocorridas em 2014 (quando possibilitou-se o registro dos sinistros pelo próprio envolvido no sinistro pelo e-DAT), foram consideradas apenas as vítimas ilesas em sinsitros com vítima.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metodologia</span>"
+    ]
+  },
+  {
+    "objectID": "metodologia.html#análises-estatísticas",
+    "href": "metodologia.html#análises-estatísticas",
+    "title": "2  Metodologia",
+    "section": "2.7 Análises estatísticas",
+    "text": "2.7 Análises estatísticas\n\nAs análises estatísticas utilizadas neste estudo incluíram o teste Qui-Quadrado e a Análise de Correspondência (ANACOR). O teste Qui-Quadro é um teste de hipóteses que tem por finalidade avaliar a associação entre variáveis categóricas, enquanto a ANACOR foi aplicada para a visualização da associação entre as categorias das variáveis analisadas. Para realizar os testes foram utilizadas as funções chisq.test() e MCA() do software R.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metodologia</span>"
+    ]
+  },
+  {
+    "objectID": "ref.html",
+    "href": "ref.html",
+    "title": "Bibliografia",
+    "section": "",
+    "text": "AHMAD. Y. et al. Comparing Occupant Injury in Vehicles Equipped with and without Frontal Airbag. Journal of the Society os Automotive Engineers Malaysia. Malaysia. 2017.\n\nBHALLA, K.;GLEASON, K. Effects of vehicle safety design on road traffic deaths, injuries, and public health burden in the Latin American region: a modelling study. The lancet. Vol 8. 2020.\n\nHøye, A. Are airbags a dangerous safety measure? A meta-analysis of the effects of frontal airbags on driver fatalities. Elsevier. Oslo, Norway. 2010.\n\n\nINTAS, G. STERGIANNIS, P. How safe are the airbags? A review of literature. Health Science Journal. Volume 5. 2011.\n\nKhorasani-Zavareh et al.: Antilock braking system effectiveness in prevention of road traffic crashes in Iran. BMC Public Health 2013 13:439\n\nVIANO, D.C. (2024) History of airbag safety benefits and risks, Traffic Injury Prevention, 25:3, 268-287, DOI: 10.1080/15389588.2024.2315889\n\nZULHILMI, M. et al. Experimental Study on the Effect of Emergency Braking without Anti-Lock Braking System to Vehicle Dynamics Behaviour. International Journal of Automotive and Mechanical Engineering. Vol 17. Malaysia. 2020.",
+    "crumbs": [
+      "Bibliografia"
+    ]
+  },
+  {
+    "objectID": "introducao.html#estudos-sobre-o-impacto-de-abs",
+    "href": "introducao.html#estudos-sobre-o-impacto-de-abs",
+    "title": "1  Introdução",
+    "section": "1.2 Estudos sobre o impacto de ABS",
+    "text": "1.2 Estudos sobre o impacto de ABS\n\nNos Estados Unidos, Bhalla e Gleason (2020) desenvolveram um estudo com o objetivo de avaliar o impacto da implementação de tecnologias de segurança veicular na América Latina e no Caribe para reduzir mortes e lesões no trânsito. A metodologia envolveu o uso de dados sobre mortalidade e sinistros de vários países da região e a estimativa dos benefícios da difusão das tecnologias de segurança veicular em termos da redução da mortalidade e do indicador DALY (Disability-Adjusted Life Years). Especificamente, o uso do controle eletrônico de estabilidade juntamente com os freios ABS poderia resultar em 19,40% menos mortes e um indicador DALY 17% menor.\n\nCom o objetivo comparar as taxas anuais de sinistros (RTCs) em carros equipados com e sem Sistema de Frenagem Antibloqueio (ABS) de um mesmo fabricante de veículos no Irã, (Khorasani-Zavareh et al., 2013) coletou os dados estudados através de uma pesquisa telefônica estruturada para obter informações sobre o número de sinistros, perdas financeiras e percepções dos motoristas em relação ao ABS. A amostra foi composta por 1.232 condutores de veículos equipados com ABS e 3.123 sem ABS, selecionados por meio de amostragem aleatória simples do cadastro da Organização Central de Seguros. Entre os motoristas de veículos equipados com ABS, 61,1% relataram situações em que acreditavam que o sistema havia evitado uma colisão e 44,1% dos motoristas com ABS não sabiam como usar o ABS de forma eficaz. O estudo descobriu também que a incidência de RTCs devido a falha de freio foi maior no grupo sem ABS, com uma taxa de 50,3 RTCs por 1.000 veículos/ano em comparação com 30,0 RTCs por 1.000 veículos/ano para os com ABS.\n\nO estudo conduzido por Zulhilm et al., 2020 teve como objetivo analisar o efeito da frenagem de emergência sem Sistema de Frenagem Antibloqueio (ABS) no comportamento da dinâmica de veículos. Com o uso de um veículo de teste (um carro nacional da Malásia, o Proton Persona) instrumentado com sensores e sistemas de aquisição de dados. Foram tomadas precauções de segurança, incluindo a utilização de uma pista de testes fechada e um motorista experiente. O estudo envolveu travagens de emergência a 60 km/h em estradas molhadas, com dados registados e analisados para fins de consistência. Os resultados indicaram que sem o ABS, o veículo enfrentava desafios na manutenção da estabilidade e da direção durante a travagem de emergência, destacando a importância do ABS na melhoria do desempenho da frenagem veicular e consequentemente da segurança rodoviária em geral.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  }
+]
