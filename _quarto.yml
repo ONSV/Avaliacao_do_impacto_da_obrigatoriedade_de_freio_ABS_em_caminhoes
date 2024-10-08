@@ -23,7 +23,7 @@ book:
     - conclusao.qmd
     - ref.qmd
   twitter-card: true
-  repo-url: https://github.com/arthurnoguti/Analise_PRF_quarto
+  repo-url: https://github.com/ONSV/Avaliacao_do_impacto_da_obrigatoriedade_de_freio_ABS_em_caminhoes
   language: pt
 
 csl: associacao-brasileira-de-normas-tecnicas.csl
