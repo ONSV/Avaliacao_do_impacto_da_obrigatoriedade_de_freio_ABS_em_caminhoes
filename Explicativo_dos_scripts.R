@@ -143,8 +143,7 @@ dados_abs_caminhao <- dados %>%
            tipo_veiculo == "Caminh\xe3o-trator"|
            tipo_veiculo == "Caminh\xe3o-Trator")
 
-dados_abs_bicleta <- dados %>%                        # TESTANDO ABSURDO (bicicleta com abs)
-  filter(tipo_veiculo == "Bicicleta")
+
 
 # Selecionando ano de fabricação ----
 dados_abs_antes <- 
@@ -159,17 +158,7 @@ dados_abs_depois <-
 
 dados_abs_caminhao <- bind_rows(dados_abs_antes, dados_abs_depois)
 
-dados_abs_antes1 <- 
-  dados_abs_bicleta %>% 
-  filter(periodo == "antes") %>% 
-  filter(ano_fabricacao_veiculo %in% c(1936:2008))
 
-dados_abs_depois1 <- 
-  dados_abs_bicleta %>% 
-  filter(periodo == "depois") %>% 
-  filter(ano_fabricacao_veiculo %in% c(2014:2023))
-
-dados_abs_bicleta <- bind_rows(dados_abs_antes1, dados_abs_depois1)
 
 # Seleção do estado físico da vítima ----
 dados_abs_caminhao <- dados_abs_caminhao %>% 
@@ -184,20 +173,10 @@ dados_abs_caminhao <- dados_abs_caminhao %>%
                                                 "(null)" = "ignorado"
   ))
 
-dados_abs_bicleta <- dados_abs_bicleta %>% 
-  mutate(classificacao_acidente = dplyr::recode(classificacao_acidente,
-                                                "Sem V\xedtimas" = "sem vitimas",
-                                                "Sem V\xedtimas        " = "sem vitimas",
-                                                "Com V\xedtimas Fatais " = "com vitimas fatais",
-                                                "Com V\xedtimas Fatais" = "com vitimas fatais",
-                                                "Com V\xedtimas Feridas" = "com vitimas feridas",
-                                                "Ignorado" = "ignorado",
-                                                "Ignorado           " = "ignorado",
-                                                "(null)" = "ignorado"
-  ))
+
 
 dados_abs_caminhao$classificacao_acidente[dados_abs_caminhao$classificacao_acidente == ""] <- "ignorado"
-dados_abs_bicleta$classificacao_acidente[dados_abs_bicleta$classificacao_acidente == ""] <- "ignorado"
+
 
 dados_abs_caminhao <- dados_abs_caminhao %>% 
   mutate(estado_fisico = dplyr::recode(estado_fisico,
@@ -217,26 +196,10 @@ dados_abs_caminhao <- dados_abs_caminhao %>%
                                        "(null)" = "ignorado"
   ))
 
-dados_abs_bicleta <- dados_abs_bicleta %>% 
-  mutate(estado_fisico = dplyr::recode(estado_fisico,
-                                       "Ileso" = "ileso",
-                                       "Ileso       " = "ileso",
-                                       "Ferido Leve" = "ferido leve",
-                                       "Ferido Leve " = "ferido leve",
-                                       "Les\xf5es Leves" = "ferido leve",
-                                       "Ferido Grave" = "ferido grave",
-                                       "Les\xf5es Graves" = "ferido grave",
-                                       "Morto" = "morto",
-                                       "Morto       " = "morto",
-                                       "\xd3bito" = "morto",
-                                       "Ignorado" = "ignorado",
-                                       "Ignorado    " = "ignorado",
-                                       "N\xe3o Informado" = "ignorado",
-                                       "(null)" = "ignorado"
-  ))
+
 
 dados_abs_caminhao$estado_fisico[dados_abs_caminhao$estado_fisico == ""] <- "ignorado"
-dados_abs_bicleta$estado_fisico[dados_abs_bicleta$estado_fisico == ""] <- "ignorado"
+
 
 dados_abs_ferido_leve <- 
   dados_abs_caminhao %>% 
@@ -258,31 +221,11 @@ dados_abs_ileso <-
   
 dados_abs_caminhao <- bind_rows(dados_abs_ferido_leve,dados_abs_ferido_grave,dados_abs_morto,dados_abs_ileso)
 
-dados_abs_ferido_leve <- 
-  dados_abs_bicleta %>% 
-  filter(estado_fisico == "ferido leve")
 
-dados_abs_ferido_grave <- 
-  dados_abs_bicleta %>% 
-  filter(estado_fisico == "ferido grave")
-
-dados_abs_morto <- 
-  dados_abs_bicleta %>% 
-  filter(estado_fisico == "morto")
-
-dados_abs_ileso <- 
-  dados_abs_bicleta %>% 
-  filter(estado_fisico == "ileso" & 
-           (classificacao_acidente == "com vitimas fatais"|
-              classificacao_acidente == "com vitimas feridas"))
-
-dados_abs_bicleta <- bind_rows(dados_abs_ferido_leve,dados_abs_ferido_grave,dados_abs_morto,dados_abs_ileso)
 # Proporção dos estados fisicos antes e depois ----
 Prop_ef_abs_antes <- as.data.frame(table(dados_abs_caminhao$estado_fisico[dados_abs_caminhao$periodo == "antes"]))
 Prop_ef_abs_depois <- as.data.frame(table(dados_abs_caminhao$estado_fisico[dados_abs_caminhao$periodo == "depois"]))
 
-Prop_ef_abs_bici_antes <- as.data.frame(table(dados_abs_bicleta$estado_fisico[dados_abs_bicleta$periodo == "antes"]))
-Prop_ef_abs_bici_depois <- as.data.frame(table(dados_abs_bicleta$estado_fisico[dados_abs_bicleta$periodo == "depois"]))
 
 Prop_ef_abs_antes <- 
   Prop_ef_abs_antes %>% 
@@ -294,18 +237,9 @@ Prop_ef_abs_depois <-
   mutate(proporção = Freq/sum(Freq)) %>% 
   mutate(variavel = "ABS depois")
 
-Prop_ef_abs_bici_antes <- 
-  Prop_ef_abs_bici_antes %>% 
-  mutate(proporção = Freq/sum(Freq)) %>% 
-  mutate(variavel = "ABS bicicleta Antes")
-
-Prop_ef_abs_bici_depois <- 
-  Prop_ef_abs_bici_depois %>% 
-  mutate(proporção = Freq/sum(Freq)) %>% 
-  mutate(variavel = "ABS bicicleta Depois")
 
 Prop_ef_abs <- bind_rows(Prop_ef_abs_antes,Prop_ef_abs_depois)
-Prop_ef_abs_bici <- bind_rows(Prop_ef_abs_bici_antes,Prop_ef_abs_bici_depois)
+
 
 Prop_ef_abs %>%                                                 # Gráfico de barras aqui
   ggplot(aes(x = reorder(Var1, proporção), y = proporção))+
@@ -316,25 +250,14 @@ Prop_ef_abs %>%                                                 # Gráfico de ba
   theme_bw()+
   labs(x = "Estado físico", y = "Proporção")
 
-Prop_ef_abs_bici %>% 
-  ggplot(aes(x = reorder(Var1, proporção), y = proporção))+
-  geom_col(fill = "orange2", color = "black")+
-  geom_text(aes(y = proporção, label = scales::percent(proporção)), vjust = -0.5,
-            position = position_dodge(width = 1)) +
-  facet_wrap(~ variavel)+
-  theme_bw()+
-  labs(x = "Estado físico", y = "Proporção")
+
 
 # Tabela para o teste ----
 tab_abs <- table(dados_abs_caminhao$estado_fisico, dados_abs_caminhao$periodo)
-tab_abs_bici <- table(dados_abs_bicleta$estado_fisico, dados_abs_bicleta$periodo)
-
-tab_abs
-tab_abs_bici
 
 # Teste chi-quadrado ----
 q2abs <- chisq.test(tab_abs)
-q2abs_bici <- chisq.test(tab_abs_bici)
+
 
 # Análise de correspondência ----
 CA_abs <- dados_abs_caminhao %>% 
